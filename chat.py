@@ -37,8 +37,7 @@ if prompt:
 
     groq_sys_prompt = ChatPromptTemplate.from_template("""Answer the following question: {user_prompt}. start the answer directly""")  
     groq_chat = ChatGroq(
-        #groq_api_key = os.environ.get("GET_API_KEY"),
-        groq_api_key = "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",
+        groq_api_key = os.environ.get("GET_API_KEY"),
         model_name = "llama3-8b-8192"
     )
     """chain = groq_sys_prompt | groq_chat| StrOutputParser()
